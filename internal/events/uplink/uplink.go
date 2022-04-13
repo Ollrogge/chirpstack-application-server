@@ -175,6 +175,10 @@ func updateDeviceActivation(ctx *uplinkContext) error {
 func decryptPayload(ctx *uplinkContext) error {
 	var err error
 
+	log.WithFields(log.Fields{
+		"APPsKey TEST": hex.EncodeToString(ctx.device.AppSKey[:]),
+	}).Info("lallaa test: ")
+
 	ctx.data, err = lorawan.EncryptFRMPayload(ctx.device.AppSKey, true, ctx.device.DevAddr, ctx.uplinkDataReq.FCnt, ctx.uplinkDataReq.Data)
 	if err != nil {
 		return errors.Wrap(err, "decrypt payload error")

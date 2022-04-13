@@ -6,7 +6,8 @@ require (
 	github.com/NickBall/go-aes-key-wrap v0.0.0-20170929221519-1c3aa3e4dfc5
 	github.com/aws/aws-sdk-go v1.26.3
 	github.com/brocaar/chirpstack-api/go/v3 v3.12.5
-	github.com/brocaar/lorawan v0.0.0-20211122090658-49524ce5fb5b
+	//github.com/brocaar/lorawan v0.0.0-20211122090658-49524ce5fb5b
+	github.com/brocaar/lorawan v0.0.0-unpublished
 	github.com/coreos/go-oidc v2.2.1+incompatible
 	github.com/eclipse/paho.mqtt.golang v1.3.1
 	github.com/go-redis/redis/v8 v8.8.3
@@ -53,3 +54,5 @@ require (
 	gopkg.in/sourcemap.v1 v1.0.5 // indirect
 	gopkg.in/square/go-jose.v2 v2.5.1 // indirect
 )
+
+replace github.com/brocaar/lorawan v0.0.0-unpublished => ../lorawan
